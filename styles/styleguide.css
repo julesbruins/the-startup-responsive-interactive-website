@@ -1,7 +1,11 @@
-/* COLORS */
 body {
+    /* COLORS */
     --black: #000000;
     --white: #ffffff;
     --primary-orange-normal: #e8712c;
     --primary-orange-dark: #b65100;
+
+    /* HEADINGS */
+    --primary-heading: 
+    --body-heading: 
 }
