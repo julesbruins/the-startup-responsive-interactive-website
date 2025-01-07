@@ -4,8 +4,47 @@ body {
     --white: #ffffff;
     --primary-orange-normal: #e8712c;
     --primary-orange-dark: #b65100;
+    --tertiary-color: #ffdd00;
 
-    /* HEADINGS */
-    --primary-heading: 
-    --body-heading: 
+    /* FONTS */
+    --primary-font: ;
+    --secondary-font: ;
+
+    /* FONT-WEIGHT */
+    --normal: 400;
+    --semibold: 600;
+    --bold: 700;
+}
+
+.links {
+    color: var(--primary-orange-dark);
+}
+
+/* BUTTON */
+.btn-primary {
+    color: var(--white);
+    border: 1px solid var(--primary-orange-normal);
+    border-radius: .25rem .25rem .25rem 0;
+    background-color: var(--primary-orange-normal);
+    padding: 0 1rem;
+}
+.btn-primary:hover {
+    color: var(--white);
+    border: 1px solid var(--primary-orange-dark);
+    background-color: var(--primary-orange-dark);
+}
+.btn-primary:focus {
+    border: 1px solid var(--primary-orange-dark);
+}
+.btn-primary:focus-visible {
+    border: 1px solid var(--black);
+}
+
+/* FONTS VACATURES */
+.vct-block {
+    font-size: 1rem;
+}
+
+img {
+    width: 100%;
 }
