@@ -20,7 +20,7 @@ body {
     color: var(--primary-orange-dark);
 }
 
-/* BUTTON */
+/* BUTTONS */
 .btn-primary {
     color: var(--white);
     border: 1px solid var(--primary-orange-normal);
@@ -39,6 +39,22 @@ body {
 .btn-primary:focus-visible {
     border: 1px solid var(--black);
 }
+
+.prev-btn, .nxt-btn {
+    border: none;
+    border-radius: .25rem;
+    background-color: var(--white);
+    /* box-shadow: 0 0 #0000,
+    0 0 #0000,
+    0 2px 4px rgba(0, 0, 0, .1); */
+}
+.prev-btn:hover, .nxt-btn:hover {   
+    color: var(--primary-orange-normal);
+}
+.prev-btn:focus, .nxt-btn:focus {
+    border: 1px solid var(--primary-orange-dark);
+}
+
 
 /* FONTS VACATURES */
 .vct-block {
