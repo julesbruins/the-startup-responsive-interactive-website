@@ -1,4 +1,20 @@
+body {
+}
+
 .vct-block {
     display: flex;
     
+}
+
+.pic-collage-btn {
+    position: fixed;
+    top: 90%;
+    left: 1rem;
+}
+
+nav {
+    margin: auto;
+    background-color: var(--primary-orange-normal);
+    border-radius: var(--br-sm);
+    width: 275px;
 }
