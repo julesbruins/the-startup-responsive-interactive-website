@@ -1,14 +1,16 @@
 body {
+    margin: 1rem;
 }
 
 .vct-block {
     display: flex;
-    
+    flex-direction: row;
+    gap: .5rem;
 }
 
 .pic-collage-btn {
     position: fixed;
-    top: 90%;
+    top: 80%;
     left: 1rem;
 }
 
@@ -16,5 +18,4 @@ nav {
     margin: auto;
     background-color: var(--primary-orange-normal);
     border-radius: var(--br-sm);
-    width: 275px;
 }

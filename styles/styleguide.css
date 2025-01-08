@@ -61,6 +61,7 @@ body {
     background-color: var(--primary-orange-normal);
     padding: .25rem 1rem;
     font-family: var(--primary-font);
+    font-size: 1rem;
 }
 .btn-primary:hover {
     color: var(--white);
