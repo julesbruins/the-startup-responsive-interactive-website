@@ -1,3 +1,24 @@
+/* FONTS INLADEN */
+@font-face {
+    font-family: 'primary';
+    font-weight: 400;
+    src: url(../fonts/notosans-400-d9804ccc636788aaa79ecb14024e94d0.woff2) format(woff2);
+}
+@font-face {
+    font-family: "primary";
+    font-weight: 600;
+    src: url(../fonts/notosans-600-36c03ba2ed7079a7ff1dcd0fb6dcb659.woff2) format(woff2);
+}
+@font-face {
+    font-family: "primary";
+    font-weight: 700;
+    src: url(../fonts/notosans-700-21614f933e167ffa06de16b5a9dfd1c5.woff2) format(woff2);
+}
+@font-face {
+    font-family: "secondary";
+    src: url(../fonts/anek-650-46c3599cb28898cae5ab96c91ffb97ef.woff2) format(woff2);
+}
+
 /* CSS RESET */
 * {
     margin: 0;
@@ -14,8 +35,8 @@ body {
     --tertiary-color: #ffdd00;
 
     /* FONTS */
-    --primary-font: ;
-    --secondary-font: ;
+    --primary-font: "primary", serif;
+    --secondary-font: "secondary", serif;
 
     /* FONT-WEIGHT */
     --fw-normal: 400;
@@ -74,10 +95,17 @@ body {
 
 
 /* FONTS VACATURES */
-.vct-block {
-    font-size: 1rem;
-}
+    .vct-block {
+        font-size: 1rem;
+    }
 
 img {
     width: 100%;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--primary-font);
+}
+p {
+    font-family: var(--secondary-font);
 }
