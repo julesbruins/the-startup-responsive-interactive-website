@@ -105,7 +105,7 @@ img {
     width: 100%;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
     font-family: var(--primary-font);
 }
 p {
@@ -127,4 +127,8 @@ h3,
 h4,
 .sm {
     font-size: clamp(1rem, 3.5vw, 1.5rem)
+}
+h5,
+.xs {
+    font-size: 1rem;
 }
