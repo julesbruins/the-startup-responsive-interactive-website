@@ -91,8 +91,9 @@ body {
 }
 
 
-.links {
+a {
     color: var(--primary-orange-dark);
+    font-family: var(--primary-font);
 }
 
 
@@ -115,6 +116,7 @@ p {
 h1,
 .xl {
     font-size: clamp(2.5rem, 6vw, 3.5rem);
+    color: var(--primary-orange-normal);
 }
 h2,
 .lg {
@@ -131,4 +133,8 @@ h4,
 h5,
 .xs {
     font-size: 1rem;
+}
+
+.hidden {
+    display: none;
 }
