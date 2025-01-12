@@ -111,16 +111,20 @@ h1, h2, h3, h4, h5 {
 }
 p {
     font-family: var(--secondary-font);
+    line-height: 1.25rem;
 }
 
 h1,
 .xl {
     font-size: clamp(2.5rem, 6vw, 3.5rem);
     color: var(--primary-orange-normal);
+    text-transform: uppercase;
+    line-height: 2.5rem;
 }
 h2,
 .lg {
-    font-size: clamp(2rem, 5vw, 2.5rem)
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    color: var(--primary-orange-normal);
 }
 h3,
 .md {
@@ -130,7 +134,6 @@ h4,
 .sm {
     font-size: clamp(1rem, 3.5vw, 1.5rem)
 }
-h5,
 .xs {
     font-size: 1rem;
 }
