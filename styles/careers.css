@@ -59,15 +59,19 @@ section.subtext {
     .scrolling {
         img {
             padding-right: .5rem;
-            width: 80%;
         }
 
         display: flex;
         scroll-behavior: smooth;
         overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        overflow: auto;
 
         margin-bottom: 2rem;
     }
+    .scrolling::-webkit-scrollbar {
+        display: none;
+      }
 }
 
 section.overview-vct {
@@ -95,3 +99,50 @@ footer {
     border-radius: var(--br-sm);
     padding: 1rem;
 }
+
+
+button {
+    cursor: pointer;
+}
+
+.carousel-view {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+    transition: all 0.25s ease-in;
+    margin: 2rem 0;
+}
+
+.carousel-view .item-list {
+    display: flex;
+    gap: .5rem;
+    scroll-behavior: smooth;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.item {
+    scroll-snap-align: center;
+}
+
+/* HIDES SCROLLBAR */
+.item-list::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  img {
+    border-radius: 999px 999px 0px 999px;
+    width: 200px;
+    height: 200px;
+    /* REPSONSIVE ^ */
+
+    object-fit: cover;
+}
+
+/* positie afbeelding in druppel */
+/* img:first-child {
+    object-position: 20%;
+} */
