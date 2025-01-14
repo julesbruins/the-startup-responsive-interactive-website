@@ -25,6 +25,35 @@ header {
     /* nog een border-radius erom */
 }
 
+section.imgs-container {
+    .carousel-view {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: .5rem;
+        transition: all 0.25s ease-in;
+        margin: 2rem 0;
+    }
+    
+    .carousel-view .item-list {
+        display: flex;
+        gap: .5rem;
+        scroll-behavior: smooth;
+        overscroll-behavior: x; /* niet terug naar vorige pagina */
+        overflow: auto;
+        scroll-snap-type: x mandatory;
+    }
+    
+    .item {
+        scroll-snap-align: center;
+    }
+    
+    /* HIDES SCROLLBAR */
+    .item-list::-webkit-scrollbar {
+        display: none;
+      }
+}
 
 section.intro-txt {
     p {
@@ -41,6 +70,23 @@ section.intro-txt {
             height: 1rem;
             width: 1rem;
         }
+    }
+}
+
+section.business-qte {
+    @media (width > 39rem) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: .5rem;
+        margin: 2rem 0;
+
+        .quotes {
+        margin:0;
+
+    }
+    
+
     }
 }
 
@@ -63,6 +109,7 @@ section.subtext {
 
         display: flex;
         scroll-behavior: smooth;
+        overscroll-behavior: x;
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
         overflow: auto;
@@ -92,6 +139,20 @@ section.overview-vct {
         gap: .25rem;
     }
     margin-bottom: 2rem;
+
+    @media (width > 28rem) {
+        .vct-block {
+            display: grid;
+            width: 100%;
+            grid-template-columns: max-content max-content;
+            grid-template-rows: fit-content max-content;
+            
+
+            h4 {
+                grid-column: 1/-1;
+            }
+        }
+    }
 }
 
 footer {
@@ -105,33 +166,6 @@ button {
     cursor: pointer;
 }
 
-.carousel-view {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: .5rem;
-    transition: all 0.25s ease-in;
-    margin: 2rem 0;
-}
-
-.carousel-view .item-list {
-    display: flex;
-    gap: .5rem;
-    scroll-behavior: smooth;
-    overscroll-behavior: x; /* niet terug naar vorige pagina */
-    overflow: auto;
-    scroll-snap-type: x mandatory;
-}
-
-.item {
-    scroll-snap-align: center;
-}
-
-/* HIDES SCROLLBAR */
-.item-list::-webkit-scrollbar {
-    display: none;
-  }
 
 
   img {
