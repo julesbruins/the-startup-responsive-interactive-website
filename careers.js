@@ -1,18 +1,15 @@
-const prev = document.querySelector('prev-btn')
-const next = document.querySelector('next-btn')
-const list = document.querySelector('item-list')
+const prev = document.querySelector('.prev-btn')
+const next = document.querySelector('.nxt-btn')
+const list = document.querySelector('.item-list')
+const img = list.querySelector('img')
+const imgWidth = img.offsetWidth
 
-// const itemWidth = 150
-// const padding = 10
+next.addEventListener('click', toNext)
+function toNext() {
+    list.scrollLeft += imgWidth
+} 
 
-// prev.addEventListener('click',()=>{
-//   list.scrollLeft -= itemWidth + padding
-// })
-
-// next.addEventListener('click',()=>{
-//   list.scrollLeft += itemWidth + padding
-// })
-
-prev.addEventListener('click') {
-    list.scrollLeft
+prev.addEventListener('click', toPrev)
+function toPrev() {
+    list.scrollLeft -= imgWidth
 }

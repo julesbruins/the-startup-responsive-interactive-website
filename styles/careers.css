@@ -119,6 +119,7 @@ button {
     display: flex;
     gap: .5rem;
     scroll-behavior: smooth;
+    overscroll-behavior: x; /* niet terug naar vorige pagina */
     overflow: auto;
     scroll-snap-type: x mandatory;
 }
