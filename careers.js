@@ -1,19 +1,4 @@
-// const prev = document.querySelector('.prev-btn')
-// const next = document.querySelector('.nxt-btn')
-// const list = document.querySelector('.item-list')
-// const img = list.querySelector('img')
-// const imgWidth = img.offsetWidth
-
-// next.addEventListener('click', toNext)
-// function toNext() {
-//     list.scrollLeft += imgWidth
-// } 
-
-// prev.addEventListener('click', toPrev)
-// function toPrev() {
-//     list.scrollLeft -= imgWidth
-// }
-
+// carousel
 const prevButton = document.querySelector("button#previous-button");
 const nextButton = document.querySelector("button#next-button");
 const list = document.querySelector("ul");
@@ -31,6 +16,8 @@ function toPrev() {
 	const currentTx = parseInt( getComputedStyle(list).getPropertyValue("--tx") );
 	const newTx = currentTx - 32;
 	list.style.setProperty("--tx", newTx);
+
+	updateButtons();
 }
 
 function toNext() {
@@ -43,4 +30,29 @@ function toNext() {
 	const currentTx = parseInt( getComputedStyle(list).getPropertyValue("--tx") );
 	const newTx = currentTx + 32;
 	list.style.setProperty("--tx", newTx);
+
+	updateButtons();
 }
+
+
+// arrows carousel
+function updateButtons() {
+    const currentTx = parseInt(getComputedStyle(list).getPropertyValue("--tx"));
+	const listWidth = list.clientWidth;
+    const listScrollWidth = list.scrollWidth;
+
+    // begin geen button
+    if (currentTx <= 0) {
+        prevButton.disabled = true;
+    } else {
+        prevButton.disabled = false;
+    }
+
+	if (currentTx >= listScrollWidth - listWidth) {
+        nextButton.disabled = true;
+    } else {
+        nextButton.disabled = false;
+    }
+  }
+
+
