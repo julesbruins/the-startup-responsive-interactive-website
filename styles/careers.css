@@ -1,6 +1,6 @@
-/* body {
-    padding: 1rem;
-} */
+body {
+    margin: 1rem;
+}
 
 .pic-collage-btn {
     position: fixed;
@@ -184,7 +184,7 @@ button {
 
 
 /* CAROUSEL */
-img.item {
+img#item {
     display: block;
     width: 100%;
 }
@@ -206,7 +206,7 @@ div.carousel-view {
 ul.item-list {
 	--tx:0;
 	
-	margin:0 auto;
+	margin: 0 auto;
 	padding:0;
 	list-style-type:"";
 	width:100%;
@@ -251,19 +251,19 @@ li:has( + li.active ) {                     /* de li voor de active */
 	width:100%;
 }
 
-img {
+img#item {
 	opacity:0;
 	transition:1s;
 }
 
-li.active img {
+li.active img#item {
 	opacity:1;
 }
 
-li.active + li img {
+li.active + li img#item {
 	opacity:.5;
 }
 
-li:has( + li.active ) img {
+li:has( + li.active ) img#item {
 	opacity:.5;
 }

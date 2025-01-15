@@ -14,10 +14,9 @@
 //     list.scrollLeft -= imgWidth
 // }
 
-const prevButton = document.querySelector("#previous");
-const nextButton = document.querySelector("#next");
-
-const list = document.querySelector("ul.item-list");
+const prevButton = document.querySelector("button#previous");
+const nextButton = document.querySelector("button#next");
+const list = document.querySelector("ul");
 
 prevButton.addEventListener("click", toPrev);
 nextButton.addEventListener("click", toNext);
