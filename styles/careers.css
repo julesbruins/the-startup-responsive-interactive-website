@@ -246,24 +246,24 @@ li:has( + li.active ) {                     /* de li voor de active */
 	transform:translateZ(1em);
 }
 
-#previous {
+#previous-button {
 	order:-1;
 	width:100%;
 }
 
-img#item {
+img {
 	opacity:0;
 	transition:1s;
 }
 
-li.active img#item {
+li.active img.item {
 	opacity:1;
 }
 
-li.active + li img#item {
+li.active + li img.item {
 	opacity:.5;
 }
 
-li:has( + li.active ) img#item {
+li:has( + li.active ) img.item {
 	opacity:.5;
 }
