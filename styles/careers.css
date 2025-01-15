@@ -1,6 +1,6 @@
-body {
-    margin: 1rem;
-}
+/* body {
+    padding: 1rem;
+} */
 
 .pic-collage-btn {
     position: fixed;
@@ -25,7 +25,7 @@ header {
     /* nog een border-radius erom */
 }
 
-section.imgs-container {
+/* section.imgs-container {
     .carousel-view {
         width: 100%;
         display: flex;
@@ -40,7 +40,7 @@ section.imgs-container {
         display: flex;
         gap: .5rem;
         scroll-behavior: smooth;
-        overscroll-behavior: x; /* niet terug naar vorige pagina */
+        overscroll-behavior: x; niet terug naar vorige pagina
         overflow: auto;
         scroll-snap-type: x mandatory;
     }
@@ -49,11 +49,11 @@ section.imgs-container {
         scroll-snap-align: center;
     }
     
-    /* HIDES SCROLLBAR */
+    HIDES SCROLLBAR
     .item-list::-webkit-scrollbar {
         display: none;
       }
-}
+} */
 
 section.intro-txt {
     p {
@@ -181,3 +181,89 @@ button {
 /* img:first-child {
     object-position: 20%;
 } */
+
+
+/* CAROUSEL */
+img.item {
+    display: block;
+    width: 100%;
+}
+
+section.imgs-container{
+    width:21em;
+	
+	display:grid;
+	grid-template-columns:1fr max-content 1fr;
+	gap:.5em;
+	align-items:center;
+}
+
+div.carousel-view {
+    width:16em;
+    overflow-x:clip;
+}
+
+ul.item-list {
+	--tx:0;
+	
+	margin:0 auto;
+	padding:0;
+	list-style-type:"";
+	width:100%;
+	
+	padding-inline:2em;
+	
+	display:grid;
+	grid-auto-columns:2em;
+	grid-auto-flow:column;
+	
+    
+	transform-style: preserve-3d;           /* zorgt ervoor dat children in 3d gepositioneerd moeten worden */
+	perspective:50em;                       /* maakt ene aafbeelding groter dan ander */
+}   
+
+li {
+    position:relative;
+    width:12em;
+    
+    translate: calc(var(--tx) * -1px);
+    transition:1s;
+
+    transform:translateZ(0em);
+    /* 	opacity:.5; */
+}
+
+li.active {
+	transform:translateZ(5em);
+/* 	filter:blur(0em); */
+}
+
+li.active + li {                            /* eerstvolgende li na de li.active */
+	transform:translateZ(1em);
+}
+
+li:has( + li.active ) {                     /* de li voor de active */
+	transform:translateZ(1em);
+}
+
+#previous {
+	order:-1;
+	width:100%;
+}
+
+img {
+	opacity:0;
+	transition:1s;
+}
+
+li.active img {
+	opacity:1;
+}
+
+li.active + li img {
+	opacity:.5;
+}
+
+li:has( + li.active ) img {
+	opacity:.5;
+}
