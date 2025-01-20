@@ -5,19 +5,30 @@ body {
 .pic-collage-btn {
     position: fixed;
     top: 80%;
-    left: 1rem;
+    left: var(--sm);
 }
 
 header {
-    margin: 1rem 1rem 0;
+    nav {
+        display: flex;
+        margin: var(--sm) var(--sm) 0;
     background-color: var(--primary-color);
     border-radius: var(--br-sm);
+    }
+
+    img.link {
+        border-radius: 0;
+        width: 100%;
+    }
+    svg {
+        height: var(--sm);  
+    }
 }
 
 
 section.intro-txt {
     p {
-        margin: 2rem 1rem 1.5rem;
+        margin: var(--md) var(--sm) 1.5rem;
     }
 
     a.btn-primary {
@@ -25,45 +36,46 @@ section.intro-txt {
         align-items: center;
         gap: .25rem;
         width: fit-content;
-        margin: 0 1rem;
+        margin: 0 var(--sm);
 
         svg {
-            height: 1rem;
-            width: 1rem;
+            height: var(--sm);
+            width: var(--sm);
         }
 
     }
 }
 
 section.business-qte {
-    margin: 0 1rem;
+    margin: 0 var(--sm);
 
-    .quotes {
+    li.quotes {
+        width: 100%;
         color: var(--primary-color);
+        list-style-type: none;
+        
+        font-family: var(--primary-font);
         font-style: italic;
         font-size: 1.25rem;
+        font-weight: var(--fw-semibold);
+        
         margin-bottom: 5px;
-
         border-left: 3px solid var(--primary-color);
 
-        /* nog een border-radius erom */
         &:first-child {
-            margin-top: 2rem;
+            margin-top: var(--md);
         }
-
         &:last-child {
-            margin-bottom: 2rem;
+            margin-bottom: var(--md);
         }
-
-        /* & selecteert in de quotes */
     }
 
     @media (width > 39rem) {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        gap: .5rem;
-        margin: 2rem 0;
+        gap: var(--xs);
+        margin: var(--md) 0;
 
         .quotes {
             margin: 0;
@@ -74,7 +86,7 @@ section.business-qte {
 
 section.subtext {
     p {
-        margin: 2rem 1rem;
+        margin: var(--md) var(--sm);
     }
 
     .scrolling {
@@ -85,7 +97,7 @@ section.subtext {
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
         overflow: auto;
-        margin: 2rem 1rem;
+        margin: var(--md) var(--sm);
 
         &::-webkit-scrollbar {
             /* hides scrollbar */
@@ -93,28 +105,28 @@ section.subtext {
         }
 
         img {
-            padding-right: .5rem;
+            padding-right: var(--xs);
         }
     }
 }
 
 section.overview-vct {
-    margin: 0 1rem 2rem;
+    margin: 0 var(--sm) var(--md);
 
 
     h3.sm {
         color: var(--secondary-color);
-        margin: 1.5rem 0 .5rem;
+        margin: 1.5rem 0 var(--xs);
     }
 
     h3.sm:nth-of-type(1) {
-        margin-top: 1rem;
+        margin-top: var(--sm);
     }
 
     article {
         border-left: 3px solid var(--primary-color);
-        padding-left: .5rem;
-        margin-bottom: 1rem;
+        padding-left: var(--xs);
+        margin-bottom: var(--sm);
 
         &:hover {
             background-color: var(--primary-color);
@@ -146,10 +158,10 @@ section.overview-vct {
 }
 
 footer {
-    margin: 0 1rem;
+    margin: 0 var(--sm);
     background-color: var(--primary-color);
     border-radius: var(--br-sm);
-    padding: 1rem;
+    padding: var(--sm);
 }
 
 
@@ -187,19 +199,19 @@ section.imgs-container {
     display: grid;
     grid-template-columns: 1fr max-content 1fr;
     grid-template-rows: max-content 1fr;
-    gap: .3em;
+    gap: .3rem;
     align-items: center;
 
-    margin: 2rem 0;
+    margin: var(--md) 0;
 
     h1 {
-        margin: 2rem 1rem 0;
+        margin: var(--md) var(--sm) 0;
         grid-column: 1/-1;
     }
 }
 
 div.carousel-view {
-    width: 16em;
+    width: 16rem;
     overflow-x: clip;
 }
 
@@ -211,43 +223,43 @@ ul.item-list {
     list-style-type: "";
     width: 100%;
 
-    padding-inline: 2em;
+    padding-inline: var(--md);
 
     display: grid;
-    grid-auto-columns: 2em;
+    grid-auto-columns: var(--md);
     grid-auto-flow: column;
 
 
     transform-style: preserve-3d;
     /* zorgt ervoor dat children in 3d gepositioneerd moeten worden */
-    perspective: 45em;
+    perspective: 45rem;
     /* maakt ene aafbeelding groter dan ander */
 }
 
 li {
     position: relative;
-    width: 12em;
+    width: 12rem;
 
     translate: calc(var(--tx) * -1px);
     transition: 1s;
 
-    transform: translateZ(0em);
+    transform: translateZ(0rem);
     /* 	opacity:.5; */
 }
 
 li.active {
-    transform: translateZ(5em);
+    transform: translateZ(5rem);
     /* 	filter:blur(0em); */
 }
 
 li.active+li {
     /* eerstvolgende li na de li.active */
-    transform: translateZ(1em);
+    transform: translateZ(1rem);
 }
 
 li:has(+ li.active) {
     /* de li voor de active */
-    transform: translateZ(1em);
+    transform: translateZ(1rem);
 }
 
 #previous-button {
