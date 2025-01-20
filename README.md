@@ -15,6 +15,9 @@ De instructies voor deze opdracht staan in: [INSTRUCTIONS.md](https://github.com
 ### Ademruimte en inspringen
 Ik heb ervoor gezorgd dat er genoeg witruimte is en dat je kan zien wanneer een element [inline of block](https://github.com/julesbruins/the-startup-responsive-interactive-website/blob/2403ac4defe5ddf34d7ca2721eec1cc354e385aa/careers.html#L33-L40) is. 
 
+### Volgorde en nesten van CSS selectors
+Ik heb ervoor gezorgd dat mijn CSS redelijk gelijk is aan de volgorde van de HTML. De elementen waar veel CSS voor nodig is staan onderaan. [Nesting](https://github.com/julesbruins/the-startup-responsive-interactive-website/blob/9494c631585de8c1a152746fefc467200d37eab6/styles/careers.css#L94-L128) zorgt voor meer overzicht. 
+
 ## Bronnen
 
 ## Licentie
