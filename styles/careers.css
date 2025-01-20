@@ -111,7 +111,6 @@ section.overview-vct {
         gap: .25rem;
     }
    
-
     @media (width > 28rem) {
         .vct-block {
             display: grid;
@@ -153,6 +152,7 @@ img {
 /* img:first-child {
     object-position: 20%;
 } */
+
 
 
 /* CAROUSEL */
