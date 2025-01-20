@@ -10,8 +10,8 @@ body {
 
 header {
     margin: 1rem 1rem 0;
-    background-color: var(--primary-orange-normal);
-    border-radius: var(--br-sm); 
+    background-color: var(--primary-color);
+    border-radius: var(--br-sm);
 }
 
 
@@ -19,34 +19,45 @@ section.intro-txt {
     p {
         margin: 2rem 1rem 1.5rem;
     }
+
     a.btn-primary {
         display: flex;
-        width: fit-content;
         align-items: center;
         gap: .25rem;
+        width: fit-content;
+        margin: 0 1rem;
 
         svg {
             height: 1rem;
             width: 1rem;
         }
 
-        margin: 0 1rem;
     }
 }
 
 section.business-qte {
     margin: 0 1rem;
-    
+
     .quotes {
-        color: var(--primary-orange-normal);
+        color: var(--primary-color);
         font-style: italic;
         font-size: 1.25rem;
         margin-bottom: 5px;
-    
-        border-left: 3px solid var(--primary-orange-normal); 
+
+        border-left: 3px solid var(--primary-color);
+
         /* nog een border-radius erom */
+        &:first-child {
+            margin-top: 2rem;
+        }
+
+        &:last-child {
+            margin-bottom: 2rem;
+        }
+
+        /* & selecteert in de quotes */
     }
-    
+
     @media (width > 39rem) {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -55,17 +66,11 @@ section.business-qte {
         margin: 2rem 0;
 
         .quotes {
-        margin:0;
-    }
+            margin: 0;
+        }
     }
 }
 
-.quotes:first-child {
-    margin-top: 2rem;
-}
-.quotes:last-child {
-    margin-bottom: 2rem;
-}
 
 section.subtext {
     p {
@@ -73,51 +78,65 @@ section.subtext {
     }
 
     .scrolling {
-        img {
-            padding-right: .5rem;
-        }
-
         display: flex;
         scroll-behavior: smooth;
-        overscroll-behavior: x;             /* niet terug naar vorige pagina */
+        overscroll-behavior: x;
+        /* niet terug naar vorige pagina */
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
         overflow: auto;
-
         margin: 2rem 1rem;
+
+        &::-webkit-scrollbar {
+            /* hides scrollbar */
+            display: none;
+        }
+
+        img {
+            padding-right: .5rem;
+        }
     }
-    .scrolling::-webkit-scrollbar {         /* hides scrollbar */
-        display: none;
-      }
 }
 
 section.overview-vct {
     margin: 0 1rem 2rem;
-    
+
+
     h3.sm {
-        color: var(--primary-orange-dark);
-        margin-bottom: .5rem;
+        color: var(--secondary-color);
+        margin: 1.5rem 0 .5rem;
+    }
+
+    h3.sm:nth-of-type(1) {
+        margin-top: 1rem;
     }
 
     article {
-        border-left: 3px solid var(--primary-orange-normal);
+        border-left: 3px solid var(--primary-color);
         padding-left: .5rem;
-        margin-bottom: .5rem;
+        margin-bottom: 1rem;
+
+        &:hover {
+            background-color: var(--primary-color);
+            border-radius: var(--br-sm);
+            color: var(--white);
+            transition: .2s;
+        }
     }
-    
+
     .vct-block {
         display: flex;
         flex-direction: column;
         gap: .25rem;
     }
-   
+
     @media (width > 28rem) {
         .vct-block {
             display: grid;
             width: 100%;
             grid-template-columns: max-content max-content;
             grid-template-rows: fit-content max-content;
-            
+
 
             h4 {
                 grid-column: 1/-1;
@@ -128,7 +147,7 @@ section.overview-vct {
 
 footer {
     margin: 0 1rem;
-    background-color: var(--primary-orange-normal);
+    background-color: var(--primary-color);
     border-radius: var(--br-sm);
     padding: 1rem;
 }
@@ -161,15 +180,15 @@ img.item {
     width: 100%;
 }
 
-section.imgs-container{
+section.imgs-container {
     margin: 0 auto;
-    width:20rem;
-	
-	display:grid;
-	grid-template-columns:1fr max-content 1fr;
+    width: 20rem;
+
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
     grid-template-rows: max-content 1fr;
-	gap:.3em;
-	align-items:center;
+    gap: .3em;
+    align-items: center;
 
     margin: 2rem 0;
 
@@ -180,74 +199,78 @@ section.imgs-container{
 }
 
 div.carousel-view {
-    width:16em;
-    overflow-x:clip;
+    width: 16em;
+    overflow-x: clip;
 }
 
 ul.item-list {
-	--tx:0;
-	
-	margin: 0 auto;
-	padding:0;
-	list-style-type:"";
-	width:100%;
-	
-	padding-inline:2em;
-	
-	display:grid;
-	grid-auto-columns:2em;
-	grid-auto-flow:column;
-	
-    
-	transform-style: preserve-3d;           /* zorgt ervoor dat children in 3d gepositioneerd moeten worden */
-	perspective:45em;                       /* maakt ene aafbeelding groter dan ander */
-}   
+    --tx: 0;
+
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: "";
+    width: 100%;
+
+    padding-inline: 2em;
+
+    display: grid;
+    grid-auto-columns: 2em;
+    grid-auto-flow: column;
+
+
+    transform-style: preserve-3d;
+    /* zorgt ervoor dat children in 3d gepositioneerd moeten worden */
+    perspective: 45em;
+    /* maakt ene aafbeelding groter dan ander */
+}
 
 li {
-    position:relative;
-    width:12em;
-    
-    translate: calc(var(--tx) * -1px);
-    transition:1s;
+    position: relative;
+    width: 12em;
 
-    transform:translateZ(0em);
+    translate: calc(var(--tx) * -1px);
+    transition: 1s;
+
+    transform: translateZ(0em);
     /* 	opacity:.5; */
 }
 
 li.active {
-	transform:translateZ(5em);
-/* 	filter:blur(0em); */
+    transform: translateZ(5em);
+    /* 	filter:blur(0em); */
 }
 
-li.active + li {                            /* eerstvolgende li na de li.active */
-	transform:translateZ(1em);
+li.active+li {
+    /* eerstvolgende li na de li.active */
+    transform: translateZ(1em);
 }
 
-li:has( + li.active ) {                     /* de li voor de active */
-	transform:translateZ(1em);
+li:has(+ li.active) {
+    /* de li voor de active */
+    transform: translateZ(1em);
 }
 
 #previous-button {
-	order:-1;
-	width:100%;
+    order: -1;
+    width: 100%;
 }
 
 img.item {
-	opacity:0;
-	transition:.5s;
+    opacity: 0;
+    transition: .5s;
 }
 
 li.active img.item {
-	opacity:1;
+    opacity: 1;
 }
 
-li.active + li img.item {
-	opacity:.5;
+li.active+li img.item {
+    opacity: .5;
     filter: blur(1px) grayscale(100%);
 }
 
-li:has( + li.active ) img.item {
-	opacity:.5;
+li:has(+ li.active) img.item {
+    opacity: .5;
     filter: blur(1px) grayscale(100%);
 }
 

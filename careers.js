@@ -1,10 +1,15 @@
 // carousel
 const prevButton = document.querySelector("button#previous-button");
 const nextButton = document.querySelector("button#next-button");
-const list = document.querySelector("ul");
+const list = document.querySelector(".item-list");
+let activeSlideIndex = 0;
+
+const allLis = [...document.querySelectorAll(".item-list li")]
 
 prevButton.addEventListener("click", toPrev);
 nextButton.addEventListener("click", toNext);
+
+updateButtons()
 
 function toPrev() {
 	const currentLi = document.querySelector(".active");
@@ -13,6 +18,8 @@ function toPrev() {
 	currentLi.classList.remove("active");
 	prevLi.classList.add("active");
 	
+	activeSlideIndex = allLis.indexOf(prevLi);
+
 	const currentTx = parseInt( getComputedStyle(list).getPropertyValue("--tx") );
 	const newTx = currentTx - 32;
 	list.style.setProperty("--tx", newTx);
@@ -27,6 +34,8 @@ function toNext() {
 	currentLi.classList.remove("active");
 	nextLi.classList.add("active");
 	
+	activeSlideIndex = allLis.indexOf(nextLi);
+
 	const currentTx = parseInt( getComputedStyle(list).getPropertyValue("--tx") );
 	const newTx = currentTx + 32;
 	list.style.setProperty("--tx", newTx);
@@ -41,14 +50,17 @@ function updateButtons() {
 	const listWidth = list.clientWidth;
     const listScrollWidth = list.scrollWidth;
 
+
     // begin geen button
-    if (currentTx <= 0) {
+    if (activeSlideIndex == 0) {
         prevButton.disabled = true;
     } else {
         prevButton.disabled = false;
     }
-
-	if (currentTx >= listScrollWidth - listWidth) {
+	
+	console.log(activeSlideIndex, allLis.length - 1);
+	
+	if (activeSlideIndex == allLis.length - 1) {
         nextButton.disabled = true;
     } else {
         nextButton.disabled = false;

@@ -30,8 +30,8 @@ body {
     /* COLORS */
     --black: #000000;
     --white: #ffffff;
-    --primary-orange-normal: #e8712c;
-    --primary-orange-dark: #b65100;
+    --primary-color: #e8712c;
+    --secondary-color: #b65100;
     --tertiary-color: #ffdd00;
 
     /* FONTS */
@@ -56,20 +56,20 @@ body {
 /* BUTTONS */
 .btn-primary {
     color: var(--white);
-    border: 1px solid var(--primary-orange-normal);
+    border: 1px solid var(--primary-color);
     border-radius: var(--br-sm);
-    background-color: var(--primary-orange-normal);
+    background-color: var(--primary-color);
     padding: .25rem 1rem;
     font-family: var(--primary-font);
     font-size: 1rem;
 }
 .btn-primary:hover {
     color: var(--white);
-    border: 1px solid var(--primary-orange-dark);
-    background-color: var(--primary-orange-dark);
+    border: 1px solid var(--secondary-color);
+    background-color: var(--secondary-color);
 }
 .btn-primary:focus {
-    border: 1px solid var(--primary-orange-dark);
+    border: 1px solid var(--secondary-color);
 }
 .btn-primary:focus-visible {
     border: 1px solid var(--black);
@@ -84,23 +84,23 @@ body {
     0 2px 4px rgba(0, 0, 0, .1); */
 }
 .prev-btn:hover, .nxt-btn:hover {   
-    color: var(--primary-orange-normal);
+    color: var(--primary-color);
 }
 /* .prev-btn:focus, .nxt-btn:focus {
-    border: 1px solid var(--primary-orange-dark);
+    border: 1px solid var(--secondary-color);
 } */
 
 
 a {
-    color: var(--primary-orange-dark);
+    color: var(--secondary-color);
     font-family: var(--primary-font);
 }
 
 
 /* FONTS VACATURES */
-    .vct-block {
-        font-size: 1rem;
-    }
+.vct-block {
+    font-size: 1rem;
+}
 
 img {
     width: 100%;
@@ -117,14 +117,14 @@ p {
 h1,
 .xl {
     font-size: clamp(2.5rem, 6vw, 3.5rem);
-    color: var(--primary-orange-normal);
+    color: var(--primary-color);
     text-transform: uppercase;
     line-height: 2.5rem;
 }
 h2,
 .lg {
     font-size: clamp(2rem, 5vw, 2.5rem);
-    color: var(--primary-orange-normal);
+    color: var(--primary-color);
 }
 h3,
 .md {
