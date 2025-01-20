@@ -12,6 +12,8 @@ De instructies voor deze opdracht staan in: [INSTRUCTIONS.md](https://github.com
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? -->
+### Ademruimte en inspringen
+Ik heb ervoor gezorgd dat er genoeg witruimte is en dat je kan zien wanneer een element [inline of block](https://github.com/julesbruins/the-startup-responsive-interactive-website/blob/2403ac4defe5ddf34d7ca2721eec1cc354e385aa/careers.html#L33-L40) is. 
 
 ## Bronnen
 
