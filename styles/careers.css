@@ -106,9 +106,6 @@ section.intro-txt {
 
 }
 
-
-
-
 section.subtext {
     p {
         padding: var(--md) var(--sm);
@@ -213,7 +210,28 @@ footer {
     margin: 0 var(--sm);
     background-color: var(--primary-color);
     border-radius: var(--br-sm);
-    padding: var(--sm);
+    padding: var(--md);
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+
+    p {
+        margin: 0 auto;
+        color: var(--white);
+    }
+    .footer-longer-text {
+        max-width: 41rem;
+    }
+    a {
+        color: var(--white);
+        &:hover {
+            color: var(--secondary-color);
+        }
+    }
+    nav {
+        margin: 0 auto;
+    }
+
 }
 
 
