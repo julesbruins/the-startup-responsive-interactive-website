@@ -10,6 +10,9 @@ body {
 
 header {
     display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 100;
     margin: var(--sm) var(--sm) 0;
     background-color: var(--primary-color);
     border-radius: var(--br-sm);
@@ -83,16 +86,16 @@ section.intro-txt {
         margin: 0 auto;
 
         @media (width > 36rem) {
-        grid-template-columns: max-content max-content;
-        grid-template-rows: max-content max-content;
-        gap: var(--xs);
-        justify-content: center;
-        margin-top: var(--md);
+            grid-template-columns: max-content max-content;
+            grid-template-rows: max-content max-content;
+            gap: var(--xs);
+            justify-content: center;
+            margin-top: var(--md);
 
-        li:nth-of-type(3) {
-            grid-column: 2/3;
-            grid-row: 1;
-        }
+            li:nth-of-type(3) {
+                grid-column: 2/3;
+                grid-row: 1;
+            }
         }
 
         @media (width > 70rem) {
@@ -219,15 +222,19 @@ footer {
         margin: 0 auto;
         color: var(--white);
     }
+
     .footer-longer-text {
         max-width: 41rem;
     }
+
     a {
         color: var(--white);
+
         &:hover {
             color: var(--secondary-color);
         }
     }
+
     nav {
         margin: 0 auto;
     }
