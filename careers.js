@@ -68,3 +68,9 @@ function updateButtons() {
   }
 
 
+const menuButton = document.querySelector('button.ham-menu');
+const navbar = document.querySelector('.navbar');
+
+menuButton.addEventListener('click', () => {
+	navbar.classList.toggle('active');
+});
