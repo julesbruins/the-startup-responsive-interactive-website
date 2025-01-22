@@ -56,6 +56,7 @@ body {
     --md: 2rem;
     --lg: 3rem;
     --xl: 4rem;
+    --xxl: 6rem;
 
 }
 
@@ -119,6 +120,11 @@ h1, h2, h3, h4, h5 {
 p {
     font-family: var(--secondary-font);
     line-height: 1.25em;
+    /* font-size: clamp(1rem, 2vw, 1.25rem); */
+}
+p.longer-text {
+    margin: 0 auto;
+    max-width: 32rem;
 }
 
 h1,

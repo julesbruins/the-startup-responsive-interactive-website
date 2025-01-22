@@ -36,7 +36,7 @@ header {
 
 section.intro-txt {
     p {
-        margin: var(--md) var(--sm) 1.5rem;
+        padding: var(--md) var(--sm);
     }
 
     a.btn-primary {
@@ -51,24 +51,6 @@ section.intro-txt {
             width: var(--sm);
         }
 
-    }
-
-    @media (width > 26rem) {
-        p {
-            margin: var(--md);
-        }
-    }
-
-    @media (width > 34rem) {
-        p {
-            margin: var(--md) var(--lg);
-        }
-    }
-
-    @media (width > 38rem) {
-        p {
-            margin: var(--lg) var(--xl);
-        }
     }
 }
 
@@ -113,7 +95,7 @@ section.intro-txt {
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
             gap: var(--xs);
-            margin: var(--md) 0;
+            margin: var(--md) 0 0;
         }
 
         li.quotes {
@@ -137,6 +119,13 @@ section.intro-txt {
 }
 
 
+
+section.subtext {
+    p {
+        padding: var(--md) var(--sm);
+    }
+}
+
 .scrolling {
     display: flex;
     scroll-behavior: smooth;
@@ -154,31 +143,6 @@ section.intro-txt {
 
     img {
         padding-right: var(--xs);
-    }
-}
-
-section.subtext {
-    p {
-        margin: var(--md) var(--sm);
-    }
-
-
-    @media (width > 26rem) {
-        p {
-            margin: var(--md);
-        }
-
-        @media (width > 34rem) {
-            p {
-                margin: var(--md) var(--lg);
-            }
-        }
-
-        @media (width > 38rem) {
-            p {
-                margin: var(--lg) var(--xl);
-            }
-        }
     }
 }
 
