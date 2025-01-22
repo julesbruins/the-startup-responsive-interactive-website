@@ -15,17 +15,20 @@ header {
     border-radius: var(--br-sm);
     justify-content: space-between;
     padding: 0.2rem;
-    
+
     a {
         display: flex;
         align-self: center;
         padding-left: 1rem;
+
         svg.pd-brand {
             height: 1.5rem;
         }
     }
+
     button {
         display: flex;
+
         svg.icon {
             height: var(--sm);
             align-self: center;
@@ -55,7 +58,7 @@ section.intro-txt {
 }
 
 .business-qte {
-    margin: 0 var(--sm);
+    margin: 0 auto;
 
     li.quotes {
         width: 100%;
@@ -67,56 +70,42 @@ section.intro-txt {
         font-size: 1.25rem;
         font-weight: var(--fw-semibold);
 
-        margin-bottom: 5px;
+        padding-right: 1.5rem;
         border-left: 3px solid var(--primary-color);
-
-        &:first-child {
-            margin-top: var(--md);
-        }
-
-        &:last-child {
-            margin-bottom: var(--md);
-        }
     }
 
-    @media (width > 26rem) {
-        margin: 0 var(--md);
-    }
+    ul {
+        display: grid;
+        grid-template-columns: max-content;
+        grid-template-rows: max-content max-content max-content max-content;
+        gap: var(--xs);
+        padding: var(--md) var(--sm);
+        margin: 0 auto;
 
-    @media (width > 34rem) {
-        margin: 0 var(--lg);
-    }
-
-    @media (width > 38rem) {
-        margin: 0 var(--lg);
-
-        ul {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            gap: var(--xs);
-            margin: var(--md) 0 0;
-        }
-
-        li.quotes {
-            margin: 0;
-        }
+        @media (width > 36rem) {
+        grid-template-columns: max-content max-content;
+        grid-template-rows: max-content max-content;
+        gap: var(--xs);
+        justify-content: center;
+        margin-top: var(--md);
 
         li:nth-of-type(3) {
             grid-column: 2/3;
             grid-row: 1;
         }
+        }
 
-        li.quotes:first-child,
-        li.quotes:last-child {
-            margin: 0;
+        @media (width > 70rem) {
+            grid-template-columns: max-content max-content max-content max-content;
         }
     }
 
-    @media (width > 44rem) {
-        margin: 0 var(--xl);
+    li.quotes {
+        margin: 0;
     }
+
 }
+
 
 
 

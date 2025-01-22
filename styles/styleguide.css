@@ -125,6 +125,15 @@ p {
 p.longer-text {
     margin: 0 auto;
     max-width: 32rem;
+
+    @media (width > 50rem) {
+        max-width: 38rem;
+        font-size: 1.125rem;
+    }
+    @media (width > 65rem) {
+        max-width: 44rem;
+        font-size: 1.25rem;
+    }
 }
 
 h1,
