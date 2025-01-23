@@ -2,12 +2,6 @@ body {
     margin: 0 auto;
 }
 
-.pic-collage-btn {
-    position: fixed;
-    top: 80%;
-    left: var(--sm);
-}
-
 header {
     display: flex;
     position: sticky;
@@ -56,7 +50,6 @@ section.intro-txt {
             height: var(--sm);
             width: var(--sm);
         }
-
     }
 }
 
