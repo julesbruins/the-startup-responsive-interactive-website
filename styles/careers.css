@@ -36,7 +36,7 @@ header {
 
 section.intro-txt {
     p {
-        padding: var(--md) var(--sm);
+        padding: 0 var(--sm) var(--md);
     }
 
     a.btn-primary {
@@ -83,7 +83,6 @@ section.intro-txt {
             grid-template-rows: max-content max-content;
             gap: var(--xs);
             justify-content: center;
-            margin-top: var(--md);
 
             li:nth-of-type(3) {
                 grid-column: 2/3;
@@ -104,7 +103,7 @@ section.intro-txt {
 
 section.subtext {
     p {
-        padding: var(--md) var(--sm);
+        padding: 0 var(--sm) var(--md);
     }
 }
 

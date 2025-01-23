@@ -4,16 +4,19 @@
     font-weight: 400;
     src: url(../fonts/notosans-400-d9804ccc636788aaa79ecb14024e94d0.woff2) format(woff2);
 }
+
 @font-face {
     font-family: "primary";
     font-weight: 600;
     src: url(../fonts/notosans-600-36c03ba2ed7079a7ff1dcd0fb6dcb659.woff2) format(woff2);
 }
+
 @font-face {
     font-family: "primary";
     font-weight: 700;
     src: url(../fonts/notosans-700-21614f933e167ffa06de16b5a9dfd1c5.woff2) format(woff2);
 }
+
 @font-face {
     font-family: "secondary";
     src: url(../fonts/anek-650-46c3599cb28898cae5ab96c91ffb97ef.woff2) format(woff2);
@@ -71,19 +74,23 @@ body {
     font-family: var(--primary-font);
     font-size: 1rem;
 }
+
 .btn-primary:hover {
     color: var(--white);
     border: 1px solid var(--secondary-color);
     background-color: var(--secondary-color);
 }
+
 .btn-primary:focus {
     border: 1px solid var(--secondary-color);
 }
+
 .btn-primary:focus-visible {
     border: 1px solid var(--black);
 }
 
-.prev-btn, .nxt-btn {
+.prev-btn,
+.nxt-btn {
     border: none;
     border-radius: var(--br-md);
     background-color: var(--white);
@@ -91,9 +98,12 @@ body {
     0 0 #0000,
     0 2px 4px rgba(0, 0, 0, .1); */
 }
-.prev-btn:hover, .nxt-btn:hover {   
+
+.prev-btn:hover,
+.nxt-btn:hover {
     color: var(--primary-color);
 }
+
 /* .prev-btn:focus, .nxt-btn:focus {
     border: 1px solid var(--secondary-color);
 } */
@@ -114,14 +124,20 @@ img {
     width: 100%;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: var(--primary-font);
 }
+
 p {
     font-family: var(--secondary-font);
     line-height: 1.25em;
     /* font-size: clamp(1rem, 2vw, 1.25rem); */
 }
+
 p.longer-text {
     margin: 0 auto;
     max-width: 32rem;
@@ -130,6 +146,7 @@ p.longer-text {
         max-width: 38rem;
         font-size: 1.125rem;
     }
+
     @media (width > 65rem) {
         max-width: 44rem;
         font-size: 1.25rem;
@@ -143,19 +160,23 @@ h1,
     text-transform: uppercase;
     line-height: 1em;
 }
+
 h2,
 .lg {
     font-size: clamp(2rem, 5vw, 2.5rem);
     color: var(--primary-color);
 }
+
 h3,
 .md {
     font-size: clamp(1.5rem, 4vw, 2rem)
-} 
+}
+
 h4,
 .sm {
     font-size: clamp(1rem, 3.5vw, 1.5rem)
 }
+
 .xs {
     font-size: 1rem;
 }
