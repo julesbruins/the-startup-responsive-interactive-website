@@ -11,6 +11,7 @@ nextButton.addEventListener("click", toNext);
 
 updateButtons()
 
+// vorige button
 function toPrev() {
 	const currentLi = document.querySelector(".active");
 	const prevLi = currentLi.previousElementSibling;
@@ -27,6 +28,7 @@ function toPrev() {
 	updateButtons();
 }
 
+// volgende button
 function toNext() {
 	const currentLi = document.querySelector(".active");
 	const nextLi = currentLi.nextElementSibling;
@@ -66,11 +68,3 @@ function updateButtons() {
         nextButton.disabled = false;
     }
   }
-
-
-const menuButton = document.querySelector('button.ham-menu');
-const navbar = document.querySelector('.navbar');
-
-menuButton.addEventListener('click', () => {
-	navbar.classList.toggle('active');
-});
